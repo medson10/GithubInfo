@@ -1,9 +1,10 @@
 var React = require('react');
+var SearchUser = require('./SearchUser');
 
 var Github = React.createClass({
   render: function() {
     return (
-      <h1>teste</h1>
+      <SearchUser />
     );
   }
 });
