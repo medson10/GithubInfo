@@ -1,8 +1,10 @@
-var React = require('react');
-var GithubService = require('../services/GithubService');
+import React from 'react';
+import GithubService from '../services/GithubService';
 
-var SearchUser = React.createClass({
-  handleSubmit: function(e) {
+
+export default class SearchUser extends React.Component {
+
+  handleSubmit (e) {
    e.preventDefault();
 
    GithubService.getByUsername(this.refs.username.value).then(function(response) {
@@ -13,10 +15,10 @@ var SearchUser = React.createClass({
      this.props.updateRepos(response.data);
    }.bind(this));
 
-  },
+  }
 
-  render: function() {
-    return (
+  render () {
+    return(
       <div className="jumbotron">
         <h1>GitHub Info</h1>
         <div className="row">
@@ -39,6 +41,4 @@ var SearchUser = React.createClass({
       </div>
     );
   }
-});
-
-module.exports = SearchUser;
+}
