@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchUser from './SearchUser';
+import SearchUser from './SearchUser.jsx';
 
 export default class Github extends React.Component {
 
@@ -7,6 +7,6 @@ export default class Github extends React.Component {
     return(
       <SearchUser />
     );
-  };
+  }
 
 }
