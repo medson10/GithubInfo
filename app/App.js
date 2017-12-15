@@ -1,6 +1,14 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-var Github = require('./components/Github');
+import Github from './components/Github.jsx';
+
+const containerStyle = {
+  paddingLeft: '150px',
+  backgroundColor: '#e8e8e8',
+  paddingRight: '150px',
+  height: '80%',
+  width: '80%'
+}
 
 ReactDOM.render(<Github />, document.getElementById('app'));
